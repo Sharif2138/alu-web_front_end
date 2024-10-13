@@ -296,8 +296,8 @@
     }
     .header .nav {
       flex-direction: column;
-      overflow: hidden;
-      max-height: 0;
+      overflow: inherit;
+      max-height: 100%;
       transition: max-height .2s ease-out;
 
     }
@@ -971,7 +971,7 @@
     max-height: 100%;
     overflow: inherit;
   }
-
+  
   header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
@@ -989,13 +989,13 @@
     top: 0;
   }
 
-  @media (max-height: 767px) {
+  @media (max-width: 767px) {
     :root {
       --header-padding: 2rem 0 0;
     }
 
     header {
-      background: var(--colour-black);
+      background: var(--color-black);
     }
 
     .header-container {
