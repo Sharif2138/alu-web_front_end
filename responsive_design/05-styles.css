@@ -904,3 +904,40 @@
     cursor: text;
     margin: 0 1rem;
   }
+
+  /* hamburger styling*/
+
+  header .menu-icon {
+    cursor: pointer;
+    padding: 2.5rem;
+    position: relative;
+    user-select: none;
+  }
+
+  header .menu-icon .navicon {
+    background: var(--color-white); 
+    display: block;                 
+    width: 2rem;                    
+    height: 0.2rem;                 
+    position: relative;             
+    transition: background 0.2s ease-out;
+  }
+
+  header .menu-icon .navicon::before,
+  header .menu-icon .navicon::after {
+    content: "";                    /* Empty content */
+    display: block;                 /* Display as block */
+    width: 100%;                    /* Full width */
+    height: 100%;                   /* Same height as the main line */
+    position: absolute;             /* Position absolutely */
+    background: var(--color-white); /* Same color as the main line */
+    transition: all 0.2s ease-out; 
+  }
+  
+  header .menu-icon .navicon::before {
+    top: 0.7rem; 
+  }
+
+  header .menu-icon .navicon::after {
+    top: -0.7rem;
+  }  
